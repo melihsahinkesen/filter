@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?43zdkl');
+  src:  url('../fonts/icomoon.eot?43zdkl#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?43zdkl') format('truetype'),
+    url('../fonts/icomoon.woff?43zdkl') format('woff'),
+    url('../fonts/icomoon.svg?43zdkl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ruudo .path1:before {
+  content: "\e900";
+  color: rgb(0, 0, 0);
+}
+.icon-ruudo .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(249, 165, 26);
+}
+.icon-ruudo .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body { font-family: sans-serif; }
+
+
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: ccc;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: #222;
+}
+.btn:active,
+.btn.is-checked {
+  background-color: #2175b0;
+  color: #fff;
+}
+
+/* --------------------------------------- */
+/* Isotope Grid */
+/* --------------------------------------- */
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* --------------------------------------- */
+/* Isotope item */
+/* --------------------------------------- */
+.item {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  float: left;
+  text-align: center;
+}
+.item.round { border-radius: 35px; }
+.item.big.round { border-radius: 75px; }
+
+.item.corek { background: #cc413a; }
+.item.kahve { background: #886a54; }
+.item.kek { background: #d47f7f; }
+
+.item.wide,
+.item.big { width: 150px; }
+.item.tall,
+.item.big { height: 150px; }
+
+.item .content {
+  color: #fff;
+  font-size: 20px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+/* --------------------------------------- */
+/* Bootstrap Slider */
+/* --------------------------------------- */
+.sliders { padding: 15px 0 30px 0; }
+.filters { margin-bottom: 20px; }
+
+
