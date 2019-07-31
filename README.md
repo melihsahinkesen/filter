@@ -4,11 +4,8 @@ I've prepared this filter for multiple filtering within the same products. I pre
 ## Preview
 <img src="https://melihsahinkesen.com/dropbox/example-filter.gif">
 
-## Html Library
-Bootstrap 4.3.1
-
 ## Included
--Bootstrap 4
+-Bootstrap 4.0
 -Isotope.js
 
 ## License
