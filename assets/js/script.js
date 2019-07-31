@@ -1,10 +1,10 @@
-// External js: jquery, isotope.pkgd.js, bootstrap.min.js, bootstrap-slider.js
+// External js: jquery, isotope.pkgd.js, bootstrap.min.js
 $(document).ready( function() {
 
   // Create object to store filter for each group
   var buttonFilters = {};
   var buttonFilter = '*';
-  // Create new object for the range filters and set default values,
+  // Create new object for the range filters and set default values
   // The default values should correspond to the default values from the slider
 
   // Initialise Isotope
@@ -19,9 +19,9 @@ $(document).ready( function() {
     }
   });
 
-
   // Look inside element with .filters class for any clicks on elements with .btn
   $('.filters').on( 'click', '.btn', function() {
+
     var $this = $(this);
     // Get group key from parent btn-group (e.g. data-filter-group="color")
     var $buttonGroup = $this.parents('.btn-group');
@@ -36,16 +36,14 @@ $(document).ready( function() {
     $grid.isotope();
   });
 
-
-  // change is-checked class on btn-filter to toggle which one is active
+  // change checked class on btn-filter to toggle which one is active
   $('.btn-group').each( function( i, buttonGroup ) {
       var $buttonGroup = $( buttonGroup );
       $buttonGroup.on( 'click', '.btn-filter', function() {
-          $buttonGroup.find('.is-checked').removeClass('is-checked');
-          $(this).addClass('is-checked');
+          $buttonGroup.find('.checked').removeClass('checked');
+          $(this).addClass('checked');
       });
   });
-
 });
 
 // Flatten object by concatting values

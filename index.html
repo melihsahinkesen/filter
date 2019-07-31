@@ -1,110 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Required meta tags -->
+	<!-- Basics
+	================================================== -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Multiple Html Filter</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="assets/css/font-awesome.css">
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<!-- CSS
+	================================================== -->
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Costum CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 <body>
 
-  <header class="jumbotron">
+  <header class="jumbotron jumbotron-fluid">
 		<div class="container">
-			<h1>
-		    <span class="icon-ruudo">
-		    	<span class="path1"></span><span class="path2"></span><span class="path3"></span>
-		    </span>
- 				Ruudo Filtre
- 			</h1>
-			<p>Katmanlı filtre</p>
+			<h1 class="display-4">Multiple Filter</h1>
+			<p class="lead">I've prepared this filter for a job I'm working on it. I prepared the filter on Bootstrap 4.3.1 and used javascript for filtering. I have added Isotope.js to be smooth in transitions.</p>
+			<hr class="my-4">
+			<p>Created by <a href="https://www.melihsahinkesen.com/" target="_blank">Melih Şahinkesen</a></p>
     </div>
   </header>
 
   <section class="container">
-		<div class="filters filter-section">
-			<div class="row search-box">
-				<div class="col-sm-4">
-					<span class="filter-label">Color:</span><br>
-					<div class="btn-group" role="group" data-filter-group="color">
-						<span class="btn btn-sm btn-default btn-filter is-checked" data-filter="">Tümü</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".corek">ÇÖREKLER</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".kahve">KAHVELER</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".kek">KEKLER</span>
+		<div class="filters d-flex flex-column flex-md-row justify-content-around">
+
+					<div class="btn-group" role="group" data-filter-group="color" aria-label="Kind">
+						<button type="button" class="btn btn-sm btn-secondary btn-filter checked" data-filter="">All</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".yellow">Yellow</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".black">Black</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".red">Red</button>
 					</div>
-				</div>
-				<div class="col-sm-4">
-					<span class="filter-label">Size:</span><br>
-					<div class="btn-group" role="group" data-filter-group="size">
-						<span class="btn btn-sm btn-default btn-filter is-checked" data-filter="">Tümü</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".small">Small</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".wide">Wide</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".big">Big</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".tall">Tall</span>
+
+					<div class="btn-group" role="group" data-filter-group="size" aria-label="Size">
+						<button type="button" class="btn btn-sm btn-secondary btn-filter checked" data-filter="">All</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".small">Small</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".wide">Wide</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".big">Big</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".tall">Tall</button>
 					</div>
-				</div>
-				<div class="col-sm-4">
-					<span class="filter-label">Shape:</span><br>
-					<div class="btn-group" role="group" data-filter-group="shape">
-						<span class="btn btn-sm btn-default btn-filter is-checked" data-filter="">Tümü</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".round">Kargolanabilir</span>
-						<span class="btn btn-sm btn-default btn-filter" data-filter=".square">Square</span>
+
+					<div class="btn-group" role="group" data-filter-group="shape" aria-label="Shape">
+						<button type="button" class="btn btn-sm btn-secondary btn-filter checked" data-filter="">All</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".round">Round</button>
+						<button type="button" class="btn btn-sm btn-secondary btn-filter" data-filter=".square">Square</button>
 					</div>
-				</div>
-			</div>
+
 		</div>
 
     <!-- This is the Isotope grid that contains all the elements to be filtered
-         The JS references the item class to define which element to sort, filter and apply masonry layout to
-         The item class could be renamed to anything you want e.g. card, product etc. and the JS from itemSelector: '.item'
+         The JS references the item class to define which element to sort, filter and apply masonry layout to the item class could be renamed to anything you want e.g. card, product etc. and the JS from itemSelector: '.item'
     -->
 		<div class="grid">
-			<div class="item small round corek"><span class="content">1<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
-			<div class="item small round kahve"><span class="content">2<i class="fa fa-coffee" aria-hidden="true"></i></span></div>
-			<div class="item small round kek" ><span class="content">3<i class="fa fa-birthday-cake" aria-hidden="true"></i></span></div>
-			<div class="item small square corek"><span class="content">4<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
-			<div class="item small square kahve"><span class="content">5<i class="fa fa-coffee" aria-hidden="true"></i></span></div>
-			<div class="item small square kek"><span class="content">6<i class="fa fa-birthday-cake" aria-hidden="true"></i></span></div>
-			<div class="item wide round corek"><span class="content">7<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
-			<div class="item wide round kahve"><span class="content">8<i class="fa fa-coffee" aria-hidden="true"></i></span></div>
-			<div class="item wide round kek"><span class="content">9<i class="fa fa-birthday-cake" aria-hidden="true"></i></span></div>
-			<div class="item wide square corek"><span class="content">10<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
-			<div class="item wide square kahve"><span class="content">11<i class="fa fa-coffee" aria-hidden="true"></i></span></div>
-			<div class="item wide square kek"><span class="content">12<i class="fa fa-birthday-cake" aria-hidden="true"></i></span></div>
-			<div class="item big round corek"><span class="content">13<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
-			<div class="item big round kahve"><span class="content">14<i class="fa fa-coffee" aria-hidden="true"></i></span></div>
-			<div class="item big round kek"><span class="content">15<i class="fa fa-birthday-cake" aria-hidden="true"></i></span></div>
-			<div class="item big square corek"><span class="content">16<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
-			<div class="item big square kahve"><span class="content">17<i class="fa fa-coffee" aria-hidden="true"></i></span></div>
-			<div class="item big square kek"><span class="content">18<i class="fa fa-birthday-cake" aria-hidden="true"></i></span></div>
-			<div class="item tall round corek"><span class="content">19<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
-			<div class="item tall round kahve"><span class="content">20<i class="fa fa-coffee" aria-hidden="true"></i></span></div>
-			<div class="item tall round kek"><span class="content">21<i class="fa fa-birthday-cake" aria-hidden="true"></i></span></div>
-			<div class="item tall square corek"><span class="content">22<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
-			<div class="item tall square kahve"><span class="content">23<i class="fa fa-coffee" aria-hidden="true"></i></span></div>
-			<div class="item tall square kek"><span class="content">24<i class="fa fa-birthday-cake" aria-hidden="true"></i></span></div>
-			<div class="item wide square corek"><span class="content">36<i class="fa fa-eercast" aria-hidden="true"></i></span></div>
+			<div class="item small round yellow"><span class="content">1</span></div>
+			<div class="item small round black"><span class="content">2</div>
+			<div class="item small round red"><span class="content">3</span></div>
+			<div class="item small square yellow"><span class="content">4</span></div>
+			<div class="item small square black"><span class="content">5</span></div>
+			<div class="item small square red"><span class="content">6</span></div>
+			<div class="item wide round yellow"><span class="content">7</span></div>
+			<div class="item wide round black"><span class="content">8</span></div>
+			<div class="item wide round red"><span class="content">9</span></div>
+			<div class="item wide square yellow"><span class="content">10</span></div>
+			<div class="item wide square black"><span class="content">11</span></div>
+			<div class="item wide square red"><span class="content">12</span></div>
+			<div class="item big round yellow"><span class="content">13</span></div>
+			<div class="item big round black"><span class="content">14</span></div>
+			<div class="item big round red"><span class="content">15</span></div>
+			<div class="item big square yellow"><span class="content">16</span></div>
+			<div class="item big square black"><span class="content">17</span></div>
+			<div class="item big square red"><span class="content">18</span></div>
+			<div class="item tall round yellow"><span class="content">19</span></div>
+			<div class="item tall round black"><span class="content">20</span></div>
+			<div class="item tall round red"><span class="content">21</span></div>
+			<div class="item tall square yellow"><span class="content">22</span></div>
+			<div class="item tall square black"><span class="content">23</span></div>
+			<div class="item tall square red"><span class="content">24</span></div>
+			<div class="item wide square yellow"><span class="content">36</span></div>
 		</div>
 	
 	</section>
 
 
 
-
-  <!-- jQuery first, then Tether, then Bootstrap JS. -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<!-- jQuery first, then JS. -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.js"></script>
-	<script src="assets/js/js.js"></script>
-
+	<!--Custom Script-->
+	<script src="assets/js/script.js"></script>
 </body>
 </html>
